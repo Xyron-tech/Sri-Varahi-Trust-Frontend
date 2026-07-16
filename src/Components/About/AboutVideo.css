@@ -1,0 +1,219 @@
+.about-video-sec {
+  padding: 60px 20px;
+  background: var(--cream, #F7F3EA);
+}
+
+.about-video-sec .wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sec-head-center {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px;
+  padding: 0 12px;
+}
+
+.video-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--saffron, #E4A046);
+  font-size: clamp(14px, 1.6vw, 16px);
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video-kicker .kicker-line {
+  width: 26px;
+  height: 2px;
+  background: var(--saffron, #E4A046);
+  flex-shrink: 0;
+}
+
+.video-heading {
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 700;
+  color: var(--ink, #20241f);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.video-sub {
+  font-size: clamp(13.5px, 1.4vw, 15px);
+  color: var(--muted, #5C6259);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.video-add-btn.ant-btn-primary {
+  background: var(--saffron, #E4A046);
+  border-color: var(--saffron, #E4A046);
+  color: var(--forest-dark, #123328);
+  border-radius: 100px;
+  height: 46px;
+  padding: 0 26px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.video-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 12px;
+  box-shadow: 0 12px 28px rgba(18, 51, 40, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(18, 51, 40, 0.1);
+}
+
+.video-frame {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, var(--forest, #1F4A3D), var(--forest-dark, #123328));
+}
+
+.video-thumb,
+.video-el {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #000;
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(228, 160, 70, 0.95);
+  color: var(--forest-dark, #123328);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.video-play-btn:hover {
+  background: #eeb15c;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.video-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 14px 6px 6px;
+}
+
+.video-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink, #20241f);
+  line-height: 1.4;
+  margin: 0;
+  flex: 1;
+}
+
+.video-admin-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.admin-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.edit-icon {
+  background: rgba(228, 160, 70, 0.15);
+  color: var(--saffron, #E4A046);
+}
+
+.edit-icon:hover {
+  background: var(--saffron, #E4A046);
+  color: #fff;
+}
+
+.delete-icon {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+
+.delete-icon:hover {
+  background: #dc3545;
+  color: #fff;
+}
+
+.video-status {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.video-des {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--muted, #5C6259);
+  margin: 4px 6px 0;
+}
+
+@media (max-width: 1024px) {
+  .video-grid {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 860px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .about-video-sec {
+    padding: 40px 16px;
+  }
+  .video-add-btn.ant-btn-primary {
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,329 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  padding: 10px 10px;
+  background: var(--forest-dark, #123328);
+  overflow-x: hidden;
+}
+
+.logo-text {
+  color: #fff;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.logo-name {
+  font-size: 17px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 10px;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: gold;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--forest);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.logo-mark::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--saffron);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  transform: rotate(45deg);
+}
+
+.logo-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fff;
+  padding: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: var(--saffron, #E4A046);
+  text-decoration: none;
+}
+
+.nav-links a.active-link {
+  color: var(--saffron, #E4A046);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-cta {
+  background-color: #4499e7;
+  color: #ffffff;
+  padding: 11px 22px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-cta:hover {
+  background-color: #2f7fd1 !important;
+}
+
+/* ---------- Login icon button ---------- */
+.login-btn {
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.login-btn:hover {
+  color: var(--saffron, #E4A046) !important;
+}
+
+/* ---------- Mobile-only action group (avatar + hamburger) ---------- */
+.mobile-actions {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: #fff !important;
+  flex-shrink: 0;
+}
+
+/* legacy mobile-panel (kept in case still referenced elsewhere) */
+.mobile-panel {
+  display: none;
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px 24px 28px;
+  border-top: 1px solid var(--line);
+  list-style: none;
+  margin: 0;
+}
+
+.mobile-panel a {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.mobile-panel.open {
+  display: flex;
+}
+
+/* ---------- antd Drawer overrides ---------- */
+.ant-drawer-body {
+  font-weight: 500;
+}
+
+.ant-menu-title-content {
+  color: #4499e7;
+}
+
+.ant-drawer-title {
+  color: gold;
+}
+
+.nav-drawer .ant-menu-item-selected {
+  background: rgba(68, 153, 231, 0.1) !important;
+  color: #4499e7 !important;
+  font-weight: 600;
+}
+
+.nav-drawer .ant-drawer-footer .ant-btn-primary {
+  background-color: #4499e7;
+  border-color: #4499e7;
+  border-radius: 100px;
+  height: 44px;
+  font-weight: 600;
+}
+
+.user-avatar-btn {
+  padding: 4px 10px;
+  border-radius: 100px;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.user-avatar-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 1100px) {
+  .nav-links {
+    gap: 14px;
+  }
+
+  .logo-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-name {
+    font-size: 16px;
+  }
+}
+
+/* Below this, switch to hamburger drawer navigation */
+@media (max-width: 940px) {
+  .nav-links,
+  .nav .nav-cta {
+    display: none;
+  }
+
+  .mobile-actions {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 640px) {
+  .logo-img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .logo-name {
+    font-size: 14px;
+    max-width: 130px;
+  }
+
+  .nav {
+    gap: 8px;
+  }
+
+  .user-avatar-btn span {
+    max-width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* Small phones — logo text can get tight, keep it on one line but smaller */
+@media (max-width: 400px) {
+  .logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logo-name {
+    font-size: 12px;
+    max-width: 90px;
+  }
+
+  .site-header {
+    padding: 6px 6px;
+  }
+
+  .nav {
+    padding: 6px 6px;
+    gap: 6px;
+  }
+
+  .mobile-actions {
+    gap: 2px;
+  }
+
+  .user-avatar-btn {
+    padding: 2px 6px;
+  }
+
+  .user-avatar-btn span {
+    display: none; /* hide name completely on very small screens, avatar icon is enough */
+  }
+}
+
+@media (max-width: 340px) {
+  .logo-name {
+    max-width: 70px;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,124 @@
+
+
+.about-charity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 64px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 24px;
+}
+
+/* ---------- Left: photo collage ---------- */
+.ac-collage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 480 / 400;
+}
+
+.ac-img {
+  position: absolute;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 16px 32px rgba(18, 51, 40, 0.14);
+}
+
+.ac-img-top-left { left: 0; top: 0; width: 46%; height: 37%; }
+.ac-img-top-right { left: 52%; top: 0; width: 44%; height: 54%; }
+.ac-img-bottom-left { left: 0; top: 45%; width: 46%; height: 55%; }
+
+.ac-stat-card {
+  position: absolute;
+  left: 52%;
+  top: 62%;
+  width: 44%;
+  height: 35%;
+  background: var(--forest-dark, #123328);
+  border: 2px solid var(--saffron, #E4A046);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 24px;
+  box-shadow: 0 16px 32px rgba(18, 51, 40, 0.2);
+}
+
+.ac-stat-number { font-size: 40px; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 10px; }
+.ac-stat-label { font-size: 13px; font-weight: 600; color: var(--saffron, #E4A046); line-height: 1.4; }
+
+/* ---------- Right: content ---------- */
+.ac-kicker {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-style: italic; font-weight: 600; color: var(--saffron, #E4A046);
+  font-size: 16px; margin-bottom: 16px;
+}
+.ac-kicker .kicker-line { width: 26px; height: 2px; background: var(--saffron, #E4A046); }
+
+.ac-heading { font-size: clamp(28px, 3.2vw, 38px); font-weight: 700; line-height: 1.2; color: var(--ink, #20241f); margin-bottom: 22px; }
+.ac-para { font-size: 15px; line-height: 1.75; color: var(--muted, #5C6259); margin-bottom: 16px; }
+.ac-para strong { color: var(--ink, #20241f); }
+
+.ac-features {
+  display: flex; gap: 28px; margin: 28px 0; padding-bottom: 28px;
+  border-bottom: 1px solid var(--line, rgba(32, 36, 31, 0.12));
+}
+.ac-feature { display: flex; align-items: flex-start; gap: 14px; flex: 1; }
+.ac-feature-icon {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--saffron, #E4A046); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+.ac-feature h4 { font-size: 15.5px; font-weight: 700; color: var(--ink, #20241f); margin-bottom: 4px; }
+.ac-feature p { font-size: 13.5px; color: var(--muted, #5C6259); line-height: 1.5; }
+
+.ac-quote { font-size: 15.5px; font-style: italic; color: var(--ink, #20241f); line-height: 1.7; margin-bottom: 30px; }
+
+.ac-cta-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.ac-cta.ant-btn-primary {
+  background: var(--saffron, #E4A046); border-color: var(--saffron, #E4A046);
+  color: var(--forest-dark, #123328); border-radius: 100px; height: 52px;
+  padding: 0 30px; font-weight: 700; font-size: 15px;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.ac-cta.ant-btn-primary:hover {
+  background: #eeb15c !important; border-color: #eeb15c !important; color: var(--forest-dark, #123328) !important;
+}
+
+.ac-call { display: flex; align-items: center; gap: 14px; }
+.ac-call-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--forest-dark, #123328); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;
+}
+.ac-call-label { display: block; font-size: 13px; color: var(--muted, #5C6259); }
+.ac-call-number { display: block; font-size: 16px; font-weight: 700; color: var(--ink, #20241f); }
+
+.about-charity-sec{
+   padding: 20px 20px ;
+}
+@media (max-width: 960px) {
+  .about-charity-grid { grid-template-columns: 1fr; gap: 48px; }
+  .ac-collage { max-width: 460px; margin: 0 auto; }
+}
+
+@media (max-width: 560px) {
+  .about-charity-sec { padding: 20px 20px; }
+  .ac-features { flex-direction: column; gap: 20px; }
+  .ac-cta-row { flex-direction: column; align-items: flex-start; gap: 20px; }
+
+}
+@media (max-width:460px) {
+    
+    .ac-stat-card{
+        width: 40%;
+        height: 40%;
+    }
+    .ac-stat-label {
+        font-size: 10px;
+    }
+    .ac-stat-number{
+        font-size: 20px;
+    }
+}

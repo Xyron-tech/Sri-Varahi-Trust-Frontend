@@ -1,0 +1,180 @@
+.volunteer-grid-sec {
+  padding:20px 20px;
+  background: var(--cream, #F7F3EA);
+}
+
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 1.1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* ---------- Shared card base ---------- */
+.v-card {
+  border-radius: 22px;
+  padding: 34px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.v-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.v-btn {
+  border-radius: 100px;
+  height: 48px;
+  padding: 0 26px;
+  font-weight: 600;
+  font-size: 14.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  width: fit-content;
+  margin-top: auto;
+}
+
+.v-btn-light.ant-btn {
+  background: var(--saffron, #E4A046);
+  color: var(--forest-dark, #123328);
+}
+
+.v-btn-light.ant-btn:hover {
+  background: #fff !important;
+  color: var(--forest-dark, #123328) !important;
+}
+
+.v-btn-white.ant-btn {
+  background: #fff;
+  color: var(--forest-dark, #123328);
+}
+
+.v-btn-white.ant-btn:hover {
+  background: var(--saffron, #E4A046) !important;
+  color: var(--forest-dark, #123328) !important;
+}
+
+.v-card-list {
+    background: var(--forest-dark, #1f644d);
+}
+
+.v-activities {
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+}
+
+.v-activities li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.v-check {
+  font-size: 10px;
+  color: var(--saffron, #E4A046);
+  flex-shrink: 0;
+}
+
+/* ---------- Card 2 — stat ---------- */
+.v-card-stat {
+  background: var(--forest, #1f644d);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.avatar-stack {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--forest, #1F4A3D);
+  object-fit: cover;
+  margin-left: -12px;
+}
+
+.avatar-img:first-child {
+  margin-left: 0;
+}
+
+.avatar-more {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--saffron, #E4A046);
+  color: var(--forest-dark, #123328);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: -12px;
+  border: 2px solid var(--forest, #1F4A3D);
+}
+
+.v-stat-number {
+  font-size: 40px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.v-stat-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--saffron, #E4A046);
+  margin-top: 6px;
+}
+
+.v-card-cta {
+  background: var(--forest-dark, #1f644d);
+  justify-content: center;
+}
+
+.v-desc {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 26px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .volunteer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .v-card-list {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .volunteer-grid {
+    grid-template-columns: 1fr;
+  }
+  .v-card-list {
+    grid-column: auto;
+  }
+  .v-activities {
+    grid-template-columns: 1fr;
+  }
+  .v-card {
+    padding: 28px 24px;
+  }
+}

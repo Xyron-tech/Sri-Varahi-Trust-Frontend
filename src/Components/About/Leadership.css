@@ -1,0 +1,243 @@
+.leadership-sec {
+  padding: 20px 20px;
+}
+
+.leadership-sec .wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sec-head-center {
+  text-align: center;
+  max-width: 600px;
+  margin:auto;
+  padding: 0 12px;
+}
+
+.leadership-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--saffron, #E4A046);
+  font-size: clamp(14px, 1.6vw, 16px);
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.leadership-kicker .kicker-line {
+  width: 26px;
+  height: 2px;
+  background: var(--saffron, #E4A046);
+  flex-shrink: 0;
+}
+
+.leadership-heading {
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 700;
+  color: var(--ink, #20241f);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.leadership-sub {
+  font-size: clamp(13.5px, 1.4vw, 15px);
+  color: var(--muted, #5C6259);
+  line-height: 1.7;
+}
+
+.leadership-grid {
+  display: grid;
+  gap: 32px;
+}
+
+/* ---------- Leader card (flex based, fixes reverse-order width bug) ---------- */
+
+.leader-card {
+  display: flex;
+  gap: 24px;
+  background: #dbdbdb;
+  border-radius: 22px;
+  padding: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(18, 51, 40, 0.1);
+}
+
+.leader-card.reverse {
+  flex-direction: row-reverse;
+  background-color: #dbdbdb;
+}
+
+.leader-img {
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--forest, #1F4A3D), var(--forest-dark, #123328));
+  flex: 0 0 300px;
+}
+
+.leader-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.leader-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.leader-name {
+  font-size: clamp(17px, 1.8vw, 19px);
+  font-weight: 700;
+  color: var(--ink, #20241f);
+  margin-bottom: 4px;
+  text-transform: capitalize;
+}
+
+.leader-role {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--saffron, #E4A046);
+  margin-bottom: 14px;
+}
+
+.leader-bio {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--muted, #5C6259);
+  margin-bottom: 18px;
+}
+
+.leader-social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.leader-social-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--forest, #1F4A3D);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.leader-social-icon:hover {
+  background: var(--forest, #1F4A3D);
+  color: #fff;
+}
+
+.leader-quote {
+  position: relative;
+  margin: 4px 0 18px;
+  padding: 12px 16px 12px 20px;
+  border-left: 3px solid var(--saffron, #E4A046);
+  background: rgb(237 157 53);
+  border-radius: 0 10px 10px 0;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.6;
+  width: fit-content;
+}
+
+.quote-mark {
+  color: var(--saffron, #E4A046);
+  font-size: 22px;
+  font-weight: 700;
+  margin-right: 2px;
+  font-style: normal;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+  .leader-img {
+    flex-basis: 240px;
+  }
+}
+
+@media (max-width: 860px) {
+  .leadership-grid {
+    gap: 24px;
+  }
+
+  .leader-card {
+    flex-direction: column !important;
+    padding: 20px;
+  }
+
+  .leader-img {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .leader-body {
+    text-align: center;
+    align-items: center;
+  }
+
+  .leader-social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .leadership-sec {
+    padding: 20px 20px;
+  }
+
+  .leader-card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .leader-img {
+    max-width: 200px;
+  }
+
+  .leader-bio {
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .leader-quote {
+    text-align: left;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .leadership-sec {
+    padding: 20px 20px;
+  }
+
+  .leader-card {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .leader-img {
+    max-width: 160px;
+  }
+}

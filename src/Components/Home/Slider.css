@@ -1,0 +1,271 @@
+.hero-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--cream, #F7F3EA);
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+
+.hero-slider .ant-carousel,
+.hero-slider .slick-slider,
+.hero-slider .slick-list,
+.hero-slider .slick-track {
+  min-height: 100%;
+}
+
+.hero-slider .slick-slide > div {
+  height: 100%;
+}
+
+.hero-slider .slick-track {
+  display: flex;
+  align-items: stretch;
+}
+
+.hero-slider .slick-slide {
+  float: none;
+  height: auto;
+}
+
+/* ================= Slide (split layout) ================= */
+.slide {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.slide-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  background: var(--forest-dark, #1f644d);
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 450px;
+}
+
+.slide-text {
+  padding: 50px 10px 50px 56px;
+  box-sizing: border-box;
+}
+
+.slide-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--saffron, #E4A046);
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.slide-kicker .kicker-line {
+  width: 26px;
+  height: 2px;
+  background: var(--saffron, #E4A046);
+  flex-shrink: 0;
+}
+
+.slide-title {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(24px, 2.6vw, 42px);
+  font-weight: 700;
+  line-height: 1.22;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.slide-title-line {
+  white-space: nowrap;
+}
+
+.slide-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 440px;
+  margin-bottom: 30px;
+}
+
+.slide-cta.ant-btn-primary {
+  background: var(--saffron, #E4A046);
+  border-color: var(--saffron, #E4A046);
+  color: var(--forest-dark, #123328);
+  border-radius: 100px;
+  height: 54px;
+  padding: 0 30px;
+  font-weight: 700;
+  font-size: 15.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slide-cta.ant-btn-primary:hover {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: var(--forest-dark, #123328) !important;
+}
+
+.slide-image-wrap {
+  position: relative;
+  width: 480px;
+  height: 340px;
+  border-radius: 20px;
+  overflow: hidden;
+  justify-self: center;
+  flex-shrink: 0;
+}
+
+.slide-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ================= Dots ================= */
+.hero-slider .hero-dots {
+  bottom: -36px;
+}
+
+.hero-slider .hero-dots li button {
+  background: rgba(25 26 25) !important;
+  height: 4px !important;
+  border-radius: 4px;
+}
+
+.hero-slider .hero-dots li.slick-active button {
+  background: var(--forest, #1F4A3D) !important;
+}
+
+/* ================= Arrows (below image, centered) ================= */
+.hero-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 52px;
+}
+
+.hero-arrow {
+  position: static;
+  transform: none;
+  z-index: 3;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(31, 74, 61, 0.25);
+  background: #fff;
+  color: var(--forest-dark, #123328);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(18, 51, 40, 0.12);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.hero-arrow:hover {
+  background: var(--forest, #1F4A3D);
+  color: #fff;
+}
+
+/* =========================================================
+   TABLET — 769px to 1024px
+   Still split layout, tighter spacing, smaller text
+   ========================================================= */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-slider {
+    padding: 20px 20px;
+  }
+  .slide-inner {
+    gap: 26px;
+    min-height: 400px;
+    border-radius: 24px;
+  }
+  .slide-text {
+    padding: 36px 10px 36px 36px;
+  }
+  .slide-desc {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+  .slide-image-wrap {
+    width: 100%;
+    max-width: 380px;
+    height: 280px;
+    justify-self: center;
+  }
+  .hero-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   MOBILE — up to 768px
+   Single column, image on top, text below, no arrows
+   ========================================================= */
+@media (max-width: 768px) {
+  .hero-slider {
+    padding: 20px 14px;
+  }
+  .slide-inner {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    border-radius: 20px;
+    gap: 0;
+  }
+  .slide-image-wrap {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+    justify-self: stretch;
+    order: -1;
+  }
+  .slide-text {
+    padding: 26px 20px 32px;
+  }
+  .slide-kicker {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .slide-title {
+    font-size: clamp(22px, 6vw, 30px);
+    margin-bottom: 14px;
+  }
+  .slide-title-line {
+    white-space: normal;
+  }
+  .slide-desc {
+    font-size: 14px;
+    max-width: 100%;
+    margin-bottom: 22px;
+  }
+  .slide-cta.ant-btn-primary {
+    height: 46px;
+    padding: 0 22px;
+    font-size: 14px;
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .hero-controls {
+    margin-top: 46px;
+  }
+}
