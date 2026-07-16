@@ -1,7 +1,7 @@
 import { FacebookFilled, TwitterOutlined, LinkedinFilled } from '@ant-design/icons';
 import './Leadership.css';
 import Head from '../../assets/Head.webp';
-import Security from '../../assets/Security.webp';
+import Security from '../../assets/security.webp';
 
 const LEADERS = [
     {

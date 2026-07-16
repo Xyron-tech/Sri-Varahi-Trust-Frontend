@@ -4,7 +4,7 @@ import foodImage from '../../assets/sri_varahi_food_image.webp';
 import houseImage from '../../assets/Sri_Varahi_house.webp';
 import groupImage from '../../assets/Sri_varahi_group_image.webp'
 import childrenImage from '../../assets/Childrengroup2.webp';
-import FoodService from '../../assets/Sri_Varahi_food_service.webp'
+import FoodService from '../../assets/Sri_varahi_food_service.webp'
 import './AboutCharity.css';
 
 const FEATURES = [
