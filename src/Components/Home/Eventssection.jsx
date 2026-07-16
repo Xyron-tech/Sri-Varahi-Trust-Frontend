@@ -10,7 +10,7 @@ import {
 import './EventsSection.css';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
-const LIMIT = 2; // number of events to show on home page — change here only
+const LIMIT = 2; 
 
 const EventsSection = () => {
   const [events, setEvents] = useState([]);

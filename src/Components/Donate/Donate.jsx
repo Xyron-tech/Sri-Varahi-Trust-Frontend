@@ -34,7 +34,7 @@ const DonatePage = () => {
   }, []);
 
   const handleDonationSuccess = (newDonation) => {
-    setDonations((prev) => [newDonation, ...prev].slice(0, 10));
+    fetchRecentDonations();
     setModalOpen(false);
   };
 
