@@ -7,7 +7,7 @@ import {
   ArrowRightOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import './EventsSection.css';
+import './Eventssection.css';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
 const LIMIT = 2; 
