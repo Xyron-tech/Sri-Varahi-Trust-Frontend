@@ -3,7 +3,7 @@ import { Carousel, Button } from 'antd';
 import { ArrowRightOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons';
 import foodImage from '../../assets/sri_varahi_food_image.webp';
 import houseImage from '../../assets/Sri_Varahi_house.webp';
-import serviceImage from '../../assets/Sri_Varahi_service_image.webp';
+import serviceImage from '../../assets/Sri_varahi_service_image.webp';
 import './Slider.css';
 
 const SLIDES = [

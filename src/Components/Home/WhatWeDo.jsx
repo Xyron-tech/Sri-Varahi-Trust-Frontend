@@ -8,7 +8,7 @@ import {
   HeartFilled
 } from '@ant-design/icons';
 import { PawPrint, Sprout } from 'lucide-react';
-import './WhatWeDo.css';
+import './Whatwedo.css';
 
 const SERVICES = [
   {

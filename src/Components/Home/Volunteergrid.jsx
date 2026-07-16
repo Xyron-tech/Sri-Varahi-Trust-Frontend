@@ -1,6 +1,6 @@
 import { Button } from 'antd';
 import { ArrowRightOutlined, CheckOutlined } from '@ant-design/icons';
-import './VolunteerGrid.css';
+import './Volunteergrid.css';
 
 const ACTIVITIES = [
     'Food distribution drives',
