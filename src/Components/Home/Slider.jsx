@@ -20,8 +20,8 @@ const SLIDES = [
         kicker: 'Community Outreach',
         title: 'Empowering Lives\nThrough Service',
         desc: 'From humanitarian relief to CSR partnerships, we work hand in hand with communities to create lasting change.',
-        ctaText: 'Our Mission',
-        ctaLink: '/vision-mission',
+        ctaText: 'About',
+        ctaLink: '/about',
     },
     {
         image: serviceImage,
@@ -29,7 +29,7 @@ const SLIDES = [
         title: 'Together We\nCan Do More',
         desc: 'Volunteer, collaborate, or contribute — every hand that joins us brings hope closer to those who need it most.',
         ctaText: 'Get Involved',
-        ctaLink: '/contact-us',
+        ctaLink: '/contact',
     },
 ];
 
@@ -41,9 +41,9 @@ const Slider = () => {
             <Carousel
                 ref={carouselRef}
                 autoplay
-                autoplaySpeed={5000}
+                autoplaySpeed={4000}
                 dots={{ className: 'hero-dots' }}
-                speed={700}
+                speed={200}
             >
                 {SLIDES.map((slide) => (
                     <div key={slide.title} className="slide">
