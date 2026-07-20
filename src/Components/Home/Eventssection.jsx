@@ -37,7 +37,6 @@ const EventsSection = () => {
           throw new Error(data.message || 'Failed to load events');
         }
 
-        // Backend already filters dateLabel = "Active", sorts by latest updated, and limits results
         if (isMounted) setEvents(data.data);
       } catch (err) {
         if (isMounted) {
