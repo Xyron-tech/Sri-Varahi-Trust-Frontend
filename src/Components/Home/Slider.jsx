@@ -40,20 +40,20 @@ const Slider = () => {
         <section className="hero-slider">
             <Carousel
                 ref={carouselRef}
-                autoplay
+                // autoplay
                 autoplaySpeed={4000}
                 dots={{ className: 'hero-dots' }}
                 speed={200}
             >
-                {SLIDES.map((slide) => (
-                    <div key={slide.title} className="slide">
+                {SLIDES?.map((slide) => (
+                    <div key={slide?.title} className="slide">
                         <div className="slide-inner wrap">
                             <div className="slide-text">
                                 <span className="slide-kicker">
                                     <span className="kicker-line"></span> {slide.kicker}
                                 </span>
                                 <h1 className="slide-title">
-                                    {slide.title.split('\n').map((line, i) => (
+                                    {slide?.title.split('\n').map((line, i) => (
                                         <span key={i} className="slide-title-line">{line}</span>
                                     ))}
                                 </h1>
